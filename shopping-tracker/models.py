@@ -1,5 +1,7 @@
-from app import db
+from db import db  # now importing from db.py
 from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+# Initialise the database
 
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
