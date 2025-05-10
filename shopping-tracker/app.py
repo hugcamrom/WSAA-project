@@ -7,13 +7,11 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-# Import models and required classes AFTER app and db are created
-import models
-from models import Item, Category, Shop
-
 @app.route('/')
 def index():
     return render_template('index.html')
+
+from models import Item, Category, Shop  # ✅ Move this *after* route definitions
 
 @app.route('/api/items', methods=['GET'])
 def get_items():
