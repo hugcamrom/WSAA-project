@@ -91,6 +91,9 @@ def delete_item(item_id):
     db.session.commit()
     return jsonify({'message': 'Item deleted successfully'})
 
+@app.route('/items')
+def items_page():
+    return render_template('items.html')
 
 
 
