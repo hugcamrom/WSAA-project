@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Tracker</title>
+</head>
+<body>
+    <h1>Shopping List</h1>
+
+    <ul id="item-list"></ul>
+
+    <h2>Add Item</h2>
+    <form id="item-form">
+        <input type="text" id="name" placeholder="Item name" required>
+        <input type="number" id="quantity" placeholder="Quantity" value="1">
+        <input type="checkbox" id="needed" checked> Needed<br>
+        <input type="number" id="category_id" placeholder="Category ID">
+        <input type="number" id="shop_id" placeholder="Shop ID">
+        <button type="submit">Add Item</button>
+    </form>
+
+    <script>
+        // Fetch and display items
+        async function loadItems() {
+            const res = await fetch('/api/items');
+            const items = await res.json();
+            const list = document.getElementById('item-list');
+            list.innerHTML = '';
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} (${item.quantity}) - ${item.category} from ${item.shop}`;
+                list.appendChild(li);
+            });
+        }
+
+        loadItems();
+
+        // Handle form submit
+        document.getElementById('item-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const item = {
+                name: document.getElementById('name').value,
+                quantity: parseInt(document.getElementById('quantity').value),
+                needed: document.getElementById('needed').checked,
+                category_id: parseInt(document.getElementById('category_id').value),
+                shop_id: parseInt(document.getElementById('shop_id').value)
+            };
+            await fetch('/api/items', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(item)
+            });
+            loadItems();
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
