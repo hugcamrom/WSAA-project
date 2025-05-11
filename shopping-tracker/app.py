@@ -95,6 +95,15 @@ def delete_item(item_id):
 def items_page():
     return render_template('items.html')
 
+@app.route('/api/categories', methods=['GET'])
+def get_categories():
+    categories = Category.query.all()
+    return jsonify([{'id': c.id, 'name': c.name} for c in categories])
+
+@app.route('/api/shops', methods=['GET'])
+def get_shops():
+    shops = Shop.query.all()
+    return jsonify([{'id': s.id, 'name': s.name} for s in shops])
 
 
 
