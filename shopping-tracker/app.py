@@ -54,6 +54,21 @@ def setup_defaults():
     db.session.commit()
     return jsonify({'message': 'Default categories and shops added'})
 
+@app.route('/api/items/<int:item_id>', methods=['PUT'])
+def update_item(item_id):
+    item = Item.query.get_or_404(item_id)
+    data = request.get_json()
+
+    item.name = data.get('name', item.name)
+    item.quantity = data.get('quantity', item.quantity)
+    item.needed = data.get('needed', item.needed)
+    item.category_id = data.get('category_id', item.category_id)
+    item.shop_id = data.get('shop_id', item.shop_id)
+
+    db.session.commit()
+    return jsonify({'message': 'Item updated successfully'})
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
