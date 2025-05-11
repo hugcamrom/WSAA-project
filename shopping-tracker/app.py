@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
-from db import db  # ✅ import from db.py
-from models import Item, Category, Shop  # ✅ import your models
+from db import db  # ok import from db.py
+from models import Item, Category, Shop  # ok import your models
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -34,6 +34,22 @@ def add_item():
     db.session.commit()
 
     return jsonify({'message': 'Item added successfully'}), 201
+@app.route('/api/items', methods=['GET'])
+def get_items():
+    items = Item.query.all()
+    items_list = []
+    for item in items:
+        items_list.append({
+            'id': item.id,
+            'name': item.name,
+            'quantity': item.quantity,
+            'needed': item.needed,
+            'category': item.category.name if item.category else None,
+            'shop': item.shop.name if item.shop else None,
+            'last_updated': item.last_updated.isoformat() if item.last_updated else None
+        })
+    return jsonify(items_list)
+
 
 @app.route('/api/setup', methods=['POST'])
 def setup_defaults():
