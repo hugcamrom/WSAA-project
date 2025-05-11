@@ -35,5 +35,25 @@ def add_item():
 
     return jsonify({'message': 'Item added successfully'}), 201
 
+@app.route('/api/setup', methods=['POST'])
+def setup_defaults():
+    # Default categories
+    categories = ['Food', 'Cleaning', 'Toiletries', 'Snacks']
+    for name in categories:
+        existing = Category.query.filter_by(name=name).first()
+        if not existing:
+            db.session.add(Category(name=name))
+
+    # Default shops
+    shops = [('Tesco', 'Dublin 8'), ('Lidl', 'Dublin 6'), ('SuperValu', 'Online')]
+    for name, location in shops:
+        existing = Shop.query.filter_by(name=name).first()
+        if not existing:
+            db.session.add(Shop(name=name, location=location))
+
+    db.session.commit()
+    return jsonify({'message': 'Default categories and shops added'})
+
+
 if __name__ == '__main__':
     app.run(debug=True)
