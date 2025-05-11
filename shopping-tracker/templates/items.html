@@ -8,8 +8,17 @@
         <input type="text" id="name" placeholder="Item name" required>
         <input type="number" id="quantity" placeholder="Quantity" value="1">
         <input type="checkbox" id="needed" checked> Needed<br>
-        <input type="number" id="category_id" placeholder="Category ID">
-        <input type="number" id="shop_id" placeholder="Shop ID">
+
+        <!-- Category dropdown -->
+        <select id="category_id" required>
+            <option value="">Select Category</option>
+        </select>
+
+        <!-- Shop dropdown -->
+        <select id="shop_id" required>
+            <option value="">Select Shop</option>
+        </select>
+
         <button type="submit">Add Item</button>
     </form>
 
@@ -37,7 +46,33 @@
             });
         }
 
+        async function loadCategories() {
+            const res = await fetch('/api/categories');
+            const categories = await res.json();
+            const select = document.getElementById('category_id');
+            categories.forEach(cat => {
+                const option = document.createElement('option');
+                option.value = cat.id;
+                option.textContent = cat.name;
+                select.appendChild(option);
+            });
+        }
+
+        async function loadShops() {
+            const res = await fetch('/api/shops');
+            const shops = await res.json();
+            const select = document.getElementById('shop_id');
+            shops.forEach(shop => {
+                const option = document.createElement('option');
+                option.value = shop.id;
+                option.textContent = shop.name;
+                select.appendChild(option);
+            });
+        }
+
         loadItems();
+        loadCategories();
+        loadShops();
 
         document.getElementById('item-form').addEventListener('submit', async (e) => {
             e.preventDefault();
