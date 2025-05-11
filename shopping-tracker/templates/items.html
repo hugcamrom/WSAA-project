@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shopping Tracker</title>
-</head>
 <body>
     <h1>Shopping List</h1>
 
@@ -20,22 +14,31 @@
     </form>
 
     <script>
-        // Fetch and display items
         async function loadItems() {
             const res = await fetch('/api/items');
             const items = await res.json();
             const list = document.getElementById('item-list');
             list.innerHTML = '';
+
             items.forEach(item => {
                 const li = document.createElement('li');
-                li.textContent = `${item.name} (${item.quantity}) - ${item.category} from ${item.shop}`;
+                li.textContent = `${item.name} (${item.quantity}) - ${item.category} from ${item.shop} `;
+
+                const delBtn = document.createElement('button');
+                delBtn.textContent = '🗑️ Delete';
+                delBtn.style.marginLeft = '10px';
+                delBtn.onclick = async () => {
+                    await fetch(`/api/items/${item.id}`, { method: 'DELETE' });
+                    loadItems();
+                };
+
+                li.appendChild(delBtn);
                 list.appendChild(li);
             });
         }
 
         loadItems();
 
-        // Handle form submit
         document.getElementById('item-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const item = {
@@ -55,4 +58,3 @@
         });
     </script>
 </body>
-</html>
