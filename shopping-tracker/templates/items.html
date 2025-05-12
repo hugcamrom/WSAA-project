@@ -22,6 +22,21 @@
         <button type="submit">Add Item</button>
     </form>
 
+    <!-- Add Category Form -->
+<h3>Add Category</h3>
+<form id="category-form">
+    <input type="text" id="new-category-name" placeholder="New category name" required>
+    <button type="submit">Add Category</button>
+</form>
+
+<!-- Add Shop Form -->
+<h3>Add Shop</h3>
+<form id="shop-form">
+    <input type="text" id="new-shop-name" placeholder="New shop name" required>
+    <input type="text" id="new-shop-location" placeholder="Shop location">
+    <button type="submit">Add Shop</button>
+</form>
+
     <script>
         async function loadItems() {
             const res = await fetch('/api/items');
