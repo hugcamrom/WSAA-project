@@ -107,4 +107,36 @@
             e.target.reset();
         });
     </script>
+
+    // Add category via form
+document.getElementById('category-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('new-category-name').value;
+    if (name) {
+        await fetch('/api/categories', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name })
+        });
+        loadCategories(); // refresh dropdown
+        e.target.reset();
+    }
+});
+
+// Add shop via form
+document.getElementById('shop-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('new-shop-name').value;
+    const location = document.getElementById('new-shop-location').value || 'Unknown';
+    if (name) {
+        await fetch('/api/shops', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, location })
+        });
+        loadShops(); // refresh dropdown
+        e.target.reset();
+    }
+});
+
 </body>
