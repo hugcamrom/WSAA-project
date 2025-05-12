@@ -133,6 +133,13 @@ def add_shop():
         return jsonify({'message': 'Shop already exists'}), 200
     return jsonify({'error': 'Missing name'}), 400
 
+@app.route('/api/shops/<int:shop_id>', methods=['DELETE'])
+def delete_shop(shop_id):
+    shop = Shop.query.get_or_404(shop_id)
+    db.session.delete(shop)
+    db.session.commit()
+    return jsonify({'message': 'Shop deleted'})
+
 
 
 if __name__ == '__main__':
