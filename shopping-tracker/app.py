@@ -140,6 +140,13 @@ def delete_shop(shop_id):
     db.session.commit()
     return jsonify({'message': 'Shop deleted'})
 
+@app.route('/api/categories/<int:category_id>', methods=['DELETE'])
+def delete_category(category_id):
+    category = Category.query.get_or_404(category_id)
+    db.session.delete(category)
+    db.session.commit()
+    return jsonify({'message': 'Category deleted'})
+
 
 
 if __name__ == '__main__':
