@@ -23,19 +23,19 @@
     </form>
 
     <!-- Add Category Form -->
-<h3>Add Category</h3>
-<form id="category-form">
-    <input type="text" id="new-category-name" placeholder="New category name" required>
-    <button type="submit">Add Category</button>
-</form>
+    <h3>Add Category</h3>
+    <form id="category-form">
+        <input type="text" id="new-category-name" placeholder="New category name" required>
+        <button type="submit">Add Category</button>
+    </form>
 
-<!-- Add Shop Form -->
-<h3>Add Shop</h3>
-<form id="shop-form">
-    <input type="text" id="new-shop-name" placeholder="New shop name" required>
-    <input type="text" id="new-shop-location" placeholder="Shop location">
-    <button type="submit">Add Shop</button>
-</form>
+    <!-- Add Shop Form -->
+    <h3>Add Shop</h3>
+    <form id="shop-form">
+        <input type="text" id="new-shop-name" placeholder="New shop name" required>
+        <input type="text" id="new-shop-location" placeholder="Shop location">
+        <button type="submit">Add Shop</button>
+    </form>
 
     <script>
         async function loadItems() {
@@ -65,6 +65,7 @@
             const res = await fetch('/api/categories');
             const categories = await res.json();
             const select = document.getElementById('category_id');
+            select.innerHTML = '<option value="">Select Category</option>'; // reset
             categories.forEach(cat => {
                 const option = document.createElement('option');
                 option.value = cat.id;
@@ -77,6 +78,7 @@
             const res = await fetch('/api/shops');
             const shops = await res.json();
             const select = document.getElementById('shop_id');
+            select.innerHTML = '<option value="">Select Shop</option>'; // reset
             shops.forEach(shop => {
                 const option = document.createElement('option');
                 option.value = shop.id;
@@ -100,43 +102,42 @@
             };
             await fetch('/api/items', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(item)
             });
             loadItems();
             e.target.reset();
         });
+
+        // Add category via form
+        document.getElementById('category-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('new-category-name').value;
+            if (name) {
+                await fetch('/api/categories', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name })
+                });
+                loadCategories();
+                e.target.reset();
+            }
+        });
+
+        // Add shop via form
+        document.getElementById('shop-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('new-shop-name').value;
+            const location = document.getElementById('new-shop-location').value || 'Unknown';
+            if (name) {
+                await fetch('/api/shops', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, location })
+                });
+                loadShops();
+                e.target.reset();
+            }
+        });
     </script>
-
-    // Add category via form
-document.getElementById('category-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const name = document.getElementById('new-category-name').value;
-    if (name) {
-        await fetch('/api/categories', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name })
-        });
-        loadCategories(); // refresh dropdown
-        e.target.reset();
-    }
-});
-
-// Add shop via form
-document.getElementById('shop-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const name = document.getElementById('new-shop-name').value;
-    const location = document.getElementById('new-shop-location').value || 'Unknown';
-    if (name) {
-        await fetch('/api/shops', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, location })
-        });
-        loadShops(); // refresh dropdown
-        e.target.reset();
-    }
-});
-
 </body>
