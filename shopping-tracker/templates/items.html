@@ -157,4 +157,70 @@
             }
         });
     </script>
+    <body class="bg-light">
+    <div class="container py-4">
+        <h1 class="mb-4 text-primary">Shopping List</h1>
+
+        <ul id="item-list" class="list-group mb-4"></ul>
+
+        <div class="card p-3 mb-4">
+            <h2>Add Item</h2>
+            <form id="item-form" class="row g-2">
+                <div class="col-md-4">
+                    <input type="text" id="name" class="form-control" placeholder="Item name" required>
+                </div>
+                <div class="col-md-2">
+                    <input type="number" id="quantity" class="form-control" placeholder="Quantity" value="1">
+                </div>
+                <div class="col-md-2">
+                    <div class="form-check mt-2">
+                        <input type="checkbox" id="needed" class="form-check-input" checked>
+                        <label class="form-check-label">Needed</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <select id="category_id" class="form-select" required>
+                        <option value="">Select Category</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select id="shop_id" class="form-select" required>
+                        <option value="">Select Shop</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary mt-2">Add Item</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card p-3 mb-4">
+            <h3>Add Category</h3>
+            <form id="category-form" class="row g-2">
+                <div class="col-md-6">
+                    <input type="text" id="new-category-name" class="form-control" placeholder="New category name" required>
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-secondary">Add Category</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card p-3">
+            <h3>Add Shop</h3>
+            <form id="shop-form" class="row g-2">
+                <div class="col-md-4">
+                    <input type="text" id="new-shop-name" class="form-control" placeholder="New shop name" required>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="new-shop-location" class="form-control" placeholder="Shop location">
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-secondary">Add Shop</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
 </body>
