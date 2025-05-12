@@ -105,6 +105,34 @@ def get_shops():
     shops = Shop.query.all()
     return jsonify([{'id': s.id, 'name': s.name} for s in shops])
 
+@app.route('/api/categories', methods=['POST'])
+def add_category():
+    data = request.get_json()
+    name = data.get('name')
+    if name:
+        existing = Category.query.filter_by(name=name).first()
+        if not existing:
+            db.session.add(Category(name=name))
+            db.session.commit()
+            return jsonify({'message': 'Category added'}), 201
+        return jsonify({'message': 'Category already exists'}), 200
+    return jsonify({'error': 'Missing name'}), 400
+
+
+@app.route('/api/shops', methods=['POST'])
+def add_shop():
+    data = request.get_json()
+    name = data.get('name')
+    location = data.get('location', 'Unknown')
+    if name:
+        existing = Shop.query.filter_by(name=name).first()
+        if not existing:
+            db.session.add(Shop(name=name, location=location))
+            db.session.commit()
+            return jsonify({'message': 'Shop added'}), 201
+        return jsonify({'message': 'Shop already exists'}), 200
+    return jsonify({'error': 'Missing name'}), 400
+
 
 
 if __name__ == '__main__':
