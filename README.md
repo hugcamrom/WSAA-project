@@ -6,7 +6,12 @@ A full-stack web application built with Flask and Bootstrap to manage your house
 
 Easily add, update, and remove shopping items while also managing categories and shops. This project demonstrates your understanding of RESTful APIs, database integration, and dynamic front-end interaction.
 
-[Live demo on PythonAnywhere](https://hugocamachoromero1.pythonanywhere.com/items)
+<p align="center">
+  <a href="https://hugocamachoromero1.pythonanywhere.com/items">
+    <img alt="Live App" src="https://img.shields.io/badge/LIVE%20APP-PythonAnywhere-brightgreen?style=for-the-badge&logo=python">
+  </a>
+</p>
+
 
 ---
 ## 🧭 Overview
@@ -190,4 +195,3 @@ Big thanks to PythonAnywhere for free hosting and to everyone who supported the 
 ###### By Hugo Camacho Romero.
 
 
----
