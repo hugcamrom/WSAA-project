@@ -140,3 +140,12 @@ Throughout development, the project evolved from a basic inventory tracker into 
 
 ---
 
+## 🔗 Sources and References
+
+- [Flask Documentation](https://flask.palletsprojects.com/)
+- [Flask-SQLAlchemy Docs](https://flask-sqlalchemy.palletsprojects.com/)
+- [PythonAnywhere Help](https://help.pythonanywhere.com/)
+- [Bootstrap Docs](https://getbootstrap.com/)
+- My class labs and assignments from the WSAA module
+
+---
