@@ -167,3 +167,9 @@ All decisions and customisations were made and reviewed by the student. AI tools
 
 ---
 
+## 📄 License
+
+This project is provided for educational purposes as part of an academic submission. Not licensed for commercial reuse.
+
+---
+
