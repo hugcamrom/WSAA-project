@@ -30,3 +30,13 @@ It demonstrates key concepts such as:
 - Deploy the solution using PythonAnywhere
 
 ---
+
+## 🚀 Features
+
+- 📝 Add, view, and delete shopping items
+- 📦 Manage categories and shops dynamically
+- ⚙️ Powered by Flask and SQLite
+- 💬 Real-time updates using JavaScript fetch API
+- 💻 Responsive design with Bootstrap 5
+
+---
