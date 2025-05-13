@@ -8,4 +8,15 @@ Easily add, update, and remove shopping items while also managing categories and
 
 [Live demo on PythonAnywhere](https://hugocamachoromero1.pythonanywhere.com/items)
 
+---
+## 🧭 Overview
 
+The Shopping Tracker is a web-based application that allows users to manage a shared household shopping list. The project was created for the *Web Services and Applications* module at ATU under the guidance of [Andrew Beatty](https://www.atu.ie/).
+
+It demonstrates key concepts such as:
+- Creating and consuming RESTful APIs
+- Connecting a Flask backend to an SQLAlchemy database
+- Building dynamic front-end interactions using the Fetch API
+- Deploying a Python web app on PythonAnywhere
+
+---
