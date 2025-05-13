@@ -160,3 +160,10 @@ All decisions and customisations were made and reviewed by the student. AI tools
 
 ---
 
+## 📌 Additional Resources
+
+- [Live App](https://hugocamachoromero1.pythonanywhere.com/items)
+- [GitHub Repository](https://github.com/hugcamrom/WSAA-project)
+
+---
+
