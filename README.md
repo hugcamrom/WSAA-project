@@ -149,3 +149,14 @@ Throughout development, the project evolved from a basic inventory tracker into 
 - My class labs and assignments from the WSAA module
 
 ---
+
+## 🧠 AI Assistance
+
+This project was developed using:
+- [GitHub Copilot](https://github.com/features/copilot) for real-time code suggestions inside Visual Studio Code.
+- [ChatGPT](https://chat.openai.com/) for guidance, error troubleshooting, RESTful API design ideas, deployment tips, and README structuring.
+
+All decisions and customisations were made and reviewed by the student. AI tools were used to support the learning process, not to replace it.
+
+---
+
