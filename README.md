@@ -40,3 +40,13 @@ It demonstrates key concepts such as:
 - 💻 Responsive design with Bootstrap 5
 
 ---
+
+## ▶️ Usage
+
+Visit `/items` to access the web interface.  
+Use the form to add shopping items, categories, and shops dynamically.  
+Items can be deleted with a click and will reflect real-time changes in the list.
+
+---
+
+
