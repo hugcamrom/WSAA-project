@@ -49,4 +49,27 @@ Items can be deleted with a click and will reflect real-time changes in the list
 
 ---
 
+## 📁 Project Structure
+
+
+
+```
+WSAA-project/
+├── shopping-tracker/
+│ ├── app.py # Main Flask application
+│ ├── db.py # SQLAlchemy setup
+│ ├── models.py # Database models
+│ ├── requirements.txt # Python dependencies
+│ ├── instance/ # (contains database.db, optional)
+│ ├── static/ # (Optional) Static files (e.g., CSS, JS)
+│ ├── templates/ # HTML templates (Bootstrap UI)
+│ ├── venv/ # Virtual environment (not included in GitHub)
+│ └── pycache/ # Compiled Python files (ignored)
+├── README.md
+├── shopping-tracker.zip # ZIP file for PythonAnywhere deployment
+└── .gitignore
+```
+
+---
+
 
