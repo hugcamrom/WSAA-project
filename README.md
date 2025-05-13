@@ -173,3 +173,5 @@ This project is provided for educational purposes as part of an academic submiss
 
 ---
 
+✅ Status
+This project is complete and live. Additional enhancements (e.g. meal planning or user accounts) are ideas for future development.
