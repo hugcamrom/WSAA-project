@@ -180,3 +180,10 @@ This project is complete and live. Additional enhancements (e.g. meal planning o
 Deployed on PythonAnywhere.
 The ZIP file shopping-tracker.zip was uploaded, extracted, and configured as a WSGI app with a working virtual environment.
 
+🙏 Acknowledgements
+This project was developed for the Web Services and Applications module as part of my coursework. It reflects RESTful API practices, front-end/back-end integration, and live deployment experience.
+
+Big thanks to PythonAnywhere for free hosting and to everyone who supported the learning process.
+
+---
+
