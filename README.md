@@ -175,3 +175,8 @@ This project is provided for educational purposes as part of an academic submiss
 
 ✅ Status
 This project is complete and live. Additional enhancements (e.g. meal planning or user accounts) are ideas for future development.
+
+🌐 Deployment Notes
+Deployed on PythonAnywhere.
+The ZIP file shopping-tracker.zip was uploaded, extracted, and configured as a WSGI app with a working virtual environment.
+
