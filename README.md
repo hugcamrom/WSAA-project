@@ -20,3 +20,13 @@ It demonstrates key concepts such as:
 - Deploying a Python web app on PythonAnywhere
 
 ---
+
+## 🎯 Project Objectives
+
+- Design a web application with RESTful API support
+- Use a relational database to store and query structured data
+- Implement full CRUD functionality via both API and frontend
+- Apply Bootstrap to create a responsive and user-friendly interface
+- Deploy the solution using PythonAnywhere
+
+---
