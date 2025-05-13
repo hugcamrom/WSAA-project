@@ -72,4 +72,50 @@ WSAA-project/
 
 ---
 
+## 🛠️ Installation & Setup
+
+To run the application locally:
+
+1. **Clone this repository:**
+
+   ```bash
+   git clone https://github.com/hugcamrom/WSAA-project.git
+   cd WSAA-project/shopping-tracker
+
+
+2. (Optional but recommended) Create and activate a virtual environment:
+
+- On Windows:
+```
+python -m venv venv
+venv\Scripts\activate
+
+```
+- On macOS/Linux:
+```
+python3 -m venv venv
+source venv/bin/activate
+
+```
+
+3. Install dependencies:
+
+```
+pip install -r requirements.txt
+
+```
+
+4. Start the Flask server:
+
+```
+python app.py
+
+```
+5. Open your browser and visit:
+
+```
+http://127.0.0.1:5000/items
+
+```
+---
 
