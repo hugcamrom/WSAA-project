@@ -119,3 +119,15 @@ http://127.0.0.1:5000/items
 ```
 ---
 
+## 🧰 Tools and Libraries
+
+- [Python 3.12](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/)
+- [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/)
+- [SQLite](https://www.sqlite.org/index.html)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [PythonAnywhere](https://www.pythonanywhere.com/)
+
+---
+
+
