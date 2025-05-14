@@ -187,6 +187,12 @@ Big thanks to PythonAnywhere for free hosting and to everyone who supported the 
 
 ---
 
+## 🏷️ Tags
+
+ #WSAA #Flask #Python #SQLite #WebDevelopment #Bootstrap #API
+
+---
+
 ### 👤 Author
 
 Hugo Camacho Romero
@@ -196,15 +202,4 @@ Student at [ATU](https://www.atu.ie/)
 Course: WEB SERVICES AND APPLICATIONS
 
 ---
-<p align="center">
-  <a href="https://hugocamachoromero1.pythonanywhere.com/items">
-    <img alt="Live App" src="https://img.shields.io/badge/LIVE%20APP-PythonAnywhere-brightgreen?style=for-the-badge&logo=python">
-  </a>
-</p>
-```
 
----
-
-## 🏷️ Tags
-#WSAA #Flask #Python #SQLite #WebDevelopment #Bootstrap #API
-```
