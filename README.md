@@ -43,6 +43,16 @@ It demonstrates key concepts such as:
 
 ---
 
+## 🖼️ Demo Screenshot
+
+Here’s what the Shopping Tracker looks like in action:
+
+<p align="center">
+  <img src="images/shopping-tracker-screenshot.png" alt="Shopping Tracker UI" width="700">
+</p>
+
+---
+
 ## ▶️ Usage
 
 Visit `/items` to access the web interface.  
@@ -50,6 +60,7 @@ Use the form to add shopping items, categories, and shops dynamically.
 Items can be deleted with a click and will reflect real-time changes in the list.
 
 ---
+
 
 ## 📁 Project Structure
 
