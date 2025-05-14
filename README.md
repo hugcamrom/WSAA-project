@@ -70,6 +70,7 @@ WSAA-project/
 ├── shopping-tracker.zip   # ZIP file for PythonAnywhere deployment
 └── .gitignore
 
+```
 
 ---
 
