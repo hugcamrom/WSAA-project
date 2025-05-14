@@ -54,7 +54,6 @@ Items can be deleted with a click and will reflect real-time changes in the list
 ## 📁 Project Structure
 
 ```bash
-
 WSAA-project/
 ├── shopping-tracker/
 │   ├── app.py              # Main Flask application
