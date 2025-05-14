@@ -11,7 +11,8 @@
 
 ## 🧭 Overview
 
-The Shopping Tracker is a web-based application that allows users to manage a shared household shopping list. The project was created for the *Web Services and Applications* module at ATU under the guidance of Lecturer [Andrew Beatty](https://www.atu.ie/).
+The Shopping Tracker is a web-based application that allows users to manage a shared household shopping list. 
+The project was created for the *Web Services and Applications* module at ATU under the guidance of Lecturer [Andrew Beatty](https://www.atu.ie/).
 
 It demonstrates key concepts such as:
 
