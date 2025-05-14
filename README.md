@@ -156,7 +156,7 @@ This project was developed using:
 - [GitHub Copilot](https://github.com/features/copilot) for real-time code suggestions inside Visual Studio Code.
 - [ChatGPT](https://chat.openai.com/) for guidance, error troubleshooting, RESTful API design ideas, deployment tips, and README structuring.
 
-All decisions and customisations were made and reviewed by the student. AI tools were used to support the learning process, not to replace it.
+All decisions and customisations were made and reviewed by the author. AI tools were used to support the learning process, not to replace it.
 
 ---
 
@@ -167,9 +167,9 @@ All decisions and customisations were made and reviewed by the student. AI tools
 
 ---
 
-## 📄 License
+## 📄 Licence
 
-This project is provided for educational purposes as part of an academic submission. Not licensed for commercial reuse.
+This project is provided for educational purposes as part of an academic submission. Not licenced for commercial reuse.
 
 ---
 
