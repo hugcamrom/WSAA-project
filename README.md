@@ -135,6 +135,7 @@ http://127.0.0.1:5000/items
 Throughout development, the project evolved from a basic inventory tracker into a more intuitive and styled application that supports:
 - Adding items, shops, and categories through the UI
 - Populating dropdown menus dynamically from the database
+- Dropdown menus enhanced with deletion options for categories and shops
 - Handling backend logic with clean, modular Python files (`app.py`, `models.py`, `db.py`)
 - Simple deployment with minimal changes to Flask's default structure
 
