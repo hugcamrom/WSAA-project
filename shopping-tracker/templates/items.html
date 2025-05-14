@@ -65,6 +65,14 @@
         </div>
         <div class="col-md-4">
           <button type="submit" class="btn btn-secondary">Add Shop</button>
+          <!-- Delete Category Section -->
+<h5 class="mt-4">🗑️ Delete Category</h5>
+<ul id="category-list" class="list-group mb-4"></ul>
+
+<!-- Delete Shop Section -->
+<h5>🗑️ Delete Shop</h5>
+<ul id="shop-list" class="list-group"></ul>
+
         </div>
       </form>
     </div>
@@ -124,6 +132,7 @@
     loadItems();
     loadCategories();
     loadShops();
+    
 
     document.getElementById('item-form').addEventListener('submit', async (e) => {
       e.preventDefault();
