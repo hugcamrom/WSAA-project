@@ -132,7 +132,63 @@
     loadItems();
     loadCategories();
     loadShops();
-    
+// 🗑️ Load and display category list with delete buttons
+async function loadCategoryList() {
+    const res = await fetch('/api/categories');
+    const categories = await res.json();
+    const list = document.getElementById('category-list');
+    list.innerHTML = '';
+
+    categories.forEach(c => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+        li.textContent = c.name;
+
+        const btn = document.createElement('button');
+        btn.className = 'btn btn-danger btn-sm';
+        btn.textContent = 'Delete';
+        btn.onclick = async () => {
+            await fetch(`/api/categories/${c.id}`, { method: 'DELETE' });
+            loadCategoryList();
+            loadCategories(); // refresh dropdown
+        };
+
+        li.appendChild(btn);
+        list.appendChild(li);
+    });
+}
+
+// 🗑️ Load and display shop list with delete buttons
+async function loadShopList() {
+    const res = await fetch('/api/shops');
+    const shops = await res.json();
+    const list = document.getElementById('shop-list');
+    list.innerHTML = '';
+
+    shops.forEach(s => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+        li.textContent = `${s.name} (${s.id})`;
+
+        const btn = document.createElement('button');
+        btn.className = 'btn btn-danger btn-sm';
+        btn.textContent = 'Delete';
+        btn.onclick = async () => {
+            await fetch(`/api/shops/${s.id}`, { method: 'DELETE' });
+            loadShopList();
+            loadShops(); // refresh dropdown
+        };
+
+        li.appendChild(btn);
+        list.appendChild(li);
+    });
+}
+  loadItems();
+loadCategories();
+loadShops();
+loadCategoryList(); // new
+loadShopList();     // new
+
 
     document.getElementById('item-form').addEventListener('submit', async (e) => {
       e.preventDefault();
