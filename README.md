@@ -34,7 +34,7 @@ It demonstrates key concepts such as:
 ## 🚀 Features
 
 - 📝 Add, view, and delete shopping items
-- 📦 Manage categories and shops dynamically
+- 🧺 Create and delete custom categories and shops directly from the UI
 - ⚙️ Powered by Flask and SQLite
 - 💬 Real-time updates using JavaScript fetch API
 - 💻 Responsive design with Bootstrap 5
