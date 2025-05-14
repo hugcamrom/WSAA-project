@@ -187,6 +187,13 @@ Big thanks to PythonAnywhere for free hosting and to everyone who supported the 
 
 ---
 
-###### By Hugo Camacho Romero.
+### 👤 Author
+
+Hugo Camacho Romero
+
+Student at [ATU](https://www.atu.ie/)
+
+Course: WEB SERVICES AND APPLICATIONS
 
 ---
+
