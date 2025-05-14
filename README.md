@@ -1,19 +1,22 @@
 # WSAA-Project - 🛒 Shopping Tracker
 
-##### Lecturer Andrew Beatty at [ATU](https://vlegalwaymayo.atu.ie/)
+## Lecturer Andrew Beatty at [ATU](https://vlegalwaymayo.atu.ie/)
+
 
 <p align="center">
   <a href="https://hugocamachoromero1.pythonanywhere.com/items">
-    <img alt="Live App" src="https://img.shields.io/badge/LIVE%20APP-PythonAnywhere-brightgreen?style=for-the-badge&logo=python">
+    <img src="https://img.shields.io/badge/LIVE%20APP-PythonAnywhere-brightgreen?style=for-the-badge&logo=python" alt="Live App">
   </a>
 </p>
 
 ---
+
 ## 🧭 Overview
 
 The Shopping Tracker is a web-based application that allows users to manage a shared household shopping list. The project was created for the *Web Services and Applications* module at ATU under the guidance of [Andrew Beatty](https://www.atu.ie/).
 
 It demonstrates key concepts such as:
+
 - Creating and consuming RESTful APIs
 - Connecting a Flask backend to an SQLAlchemy database
 - Building dynamic front-end interactions using the Fetch API
@@ -51,10 +54,7 @@ Items can be deleted with a click and will reflect real-time changes in the list
 
 ## 📁 Project Structure
 
-
-
-```
-WSAA-project/
+```WSAA-project/
 ├── shopping-tracker/
 │ ├── app.py # Main Flask application
 │ ├── db.py # SQLAlchemy setup
@@ -86,37 +86,47 @@ To run the application locally:
 2. (Optional but recommended) Create and activate a virtual environment:
 
 - On Windows:
+
 ```
+
 python -m venv venv
 venv\Scripts\activate
 
 ```
+
 - On macOS/Linux:
+
 ```
+
 python3 -m venv venv
 source venv/bin/activate
 
 ```
 
-3. Install dependencies:
+3.Install dependencies:
 
 ```
+
 pip install -r requirements.txt
 
 ```
 
-4. Start the Flask server:
+4.Start the Flask server:
 
 ```
+
 python app.py
 
 ```
-5. Open your browser and visit:
+
+5.Open your browser and visit:
 
 ```
+
 http://127.0.0.1:5000/items
 
 ```
+
 ---
 
 ## 🧰 Tools and Libraries
@@ -133,6 +143,7 @@ http://127.0.0.1:5000/items
 ## 📚 Documentation and Insights
 
 Throughout development, the project evolved from a basic inventory tracker into a more intuitive and styled application that supports:
+
 - Adding items, shops, and categories through the UI
 - Populating dropdown menus dynamically from the database
 - Dropdown menus enhanced with deletion options for categories and shops
@@ -154,7 +165,9 @@ Throughout development, the project evolved from a basic inventory tracker into 
 ## 🧠 AI Assistance
 
 This project was developed using:
+
 - [GitHub Copilot](https://github.com/features/copilot) for real-time code suggestions inside Visual Studio Code.
+
 - [ChatGPT](https://chat.openai.com/) for guidance, error troubleshooting, RESTful API design ideas, deployment tips, and README structuring.
 
 All decisions and customisations were made and reviewed by the author. AI tools were used to support the learning process, not to replace it.
