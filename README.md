@@ -48,7 +48,8 @@ It demonstrates key concepts such as:
 Here’s what the Shopping Tracker looks like in action:
 
 <p align="center">
-  <img src="images/shopping-tracker-screenshot.png" alt="Shopping Tracker UI" width="700">
+   <img src="images/shopping-tracker-screenshot.png" alt="Shopping Tracker UI" width="700">
+   
 </p>
 
 ---
